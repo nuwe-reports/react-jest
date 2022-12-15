@@ -1,7 +1,5 @@
 import logo from "./logo.svg";
 import "./App.css";
-import AcceptCookies from "./components/AcceptCookies";
-import TextBox from "./components/TextBox";
 
 function App() {
   return (
@@ -16,12 +14,6 @@ function App() {
         >
           Learn React
         </a>
-        <div className="App-container">
-          <AcceptCookies />
-        </div>
-        <div className="App-container">
-          <TextBox />
-        </div>
       </header>
     </div>
   );
