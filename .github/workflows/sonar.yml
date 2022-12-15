@@ -17,8 +17,10 @@ jobs:
 
       - name: Generate coverage
         run: |
-          npm ci
+          npm i
           npm run test
+        env:
+          CI: false
 
       - name: SonarQube scan 🚨
         if: always()
