@@ -15,9 +15,10 @@ jobs:
       - name: Check out code 🛎
         uses: actions/checkout@v2
 
-      - name: Run Jest ⌛️
-      - run: npm ci
-      - run: npm run test
+      - name: Generate coverage
+        run: |
+          npm ci
+          npm run test
 
       - name: SonarQube scan 🚨
         if: always()
