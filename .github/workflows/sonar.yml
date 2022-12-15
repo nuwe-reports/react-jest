@@ -15,11 +15,10 @@ jobs:
       - name: Check out code 🛎
         uses: actions/checkout@v2
 
-      - name: Run Component tests 🧪
-        uses: cypress-io/github-action@v2
+      - name: Run Jest
+        uses: stefanoeb/jest-action@1.0.3
         with:
-          install: true
-          command: npm run test
+          jestArgs: --coverage
 
       - name: SonarQube scan 🚨
         uses: sonarsource/sonarqube-scan-action@master
