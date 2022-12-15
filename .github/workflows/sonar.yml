@@ -17,11 +17,10 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
-          cache: 'npm'
 
       - name: Generate API coverage
         run: |
-          npm i
+          npm ci
           npm run test
         env:
           CI: true
